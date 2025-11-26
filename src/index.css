@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Бессонница Brand Colors */
+    --cream: 46 43% 97%; /* #FBF9EF - молочно-белый */
+    --wine: 353 38% 21%; /* #4A2125 - бордово-винный */
+    --forest: 166 44% 18%; /* #17443B - тёмно-зелёный */
+    --rose-gold: 359 30% 57%; /* #B07071 - розово-золотистый */
+    --gold: 34 44% 42%; /* #9D703D - золотисто-медный */
+    --deep-black: 0 0% 9%; /* #171717 - глубокий чёрный */
+    
+    /* Semantic tokens */
+    --background: var(--deep-black);
+    --foreground: var(--cream);
+
+    --card: var(--forest);
+    --card-foreground: var(--cream);
+
+    --popover: var(--wine);
+    --popover-foreground: var(--cream);
+
+    --primary: var(--wine);
+    --primary-foreground: var(--cream);
+
+    --secondary: var(--rose-gold);
+    --secondary-foreground: var(--deep-black);
+
+    --muted: var(--forest);
+    --muted-foreground: 46 20% 70%;
+
+    --accent: var(--gold);
+    --accent-foreground: var(--cream);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--cream);
+
+    --border: var(--gold);
+    --input: var(--forest);
+    --ring: var(--gold);
+
+    --radius: 0rem;
+
+    /* Gradients */
+    --gradient-mystical: linear-gradient(135deg, hsl(var(--wine)) 0%, hsl(var(--forest)) 100%);
+    --gradient-gold: linear-gradient(90deg, hsl(var(--rose-gold)) 0%, hsl(var(--gold)) 100%);
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, hsl(var(--deep-black) / 0.8) 100%);
+    
+    /* Shadows */
+    --shadow-mystical: 0 10px 40px hsl(var(--wine) / 0.4);
+    --shadow-gold: 0 0 30px hsl(var(--gold) / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: var(--deep-black);
+    --foreground: var(--cream);
+    --card: var(--forest);
+    --card-foreground: var(--cream);
+    --popover: var(--wine);
+    --popover-foreground: var(--cream);
+    --primary: var(--wine);
+    --primary-foreground: var(--cream);
+    --secondary: var(--rose-gold);
+    --secondary-foreground: var(--deep-black);
+    --muted: var(--forest);
+    --muted-foreground: 46 20% 70%;
+    --accent: var(--gold);
+    --accent-foreground: var(--cream);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Unicase', serif;
+  }
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .text-shadow-gold {
+    text-shadow: 0 0 20px hsl(var(--gold) / 0.5);
+  }
+  
+  .mystical-glow {
+    box-shadow: var(--shadow-mystical);
+  }
+  
+  .gold-glow {
+    box-shadow: 0 0 20px rgba(157, 112, 61, 0.4);
+  }
+
+  .bg-gradient-mystical {
+    background: linear-gradient(135deg, var(--deep-black) 0%, var(--forest) 50%, var(--deep-black) 100%);
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--rose-gold) 100%);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(157, 112, 61, 0.3);
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(157, 112, 61, 0.6);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .shimmer-bg {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(157, 112, 61, 0.3) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .reveal-on-scroll {
+    animation: reveal 0.8s ease-out forwards;
+    opacity: 0;
+  }
+}
