@@ -78,7 +78,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gold/10 text-center text-cream/60 text-sm">
-          <p>© 2025 Ресторан «Бессонница». Все права защищены.</p>
+          <p>© 2025 Ресторан «Бессонница». Все права защищены</p>
           <p className="mt-2">
             <a href="#" className="hover:text-gold transition-colors">
               Политика конфиденциальности
