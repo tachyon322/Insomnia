@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# Бессонница: Ночное Очарование
 
-## Project info
+Сайт для бара "Бессонница: Ночное Очарование" - место, где ночь становится вкусной.
 
-**URL**: https://lovable.dev/projects/2dc28bfc-6b9d-4e64-bdc3-7dc9f3a94f3f
+## Как редактировать код?
 
-## How can I edit this code?
+**Используйте ваш любимый IDE**
 
-There are several ways of editing your application.
+Требуется установка Node.js & npm - [установите с nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/2dc28bfc-6b9d-4e64-bdc3-7dc9f3a94f3f) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Следуйте этим шагам:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Шаг 1: Клонируйте репозиторий.
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Шаг 2: Перейдите в директорию проекта.
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
+# Шаг 3: Установите необходимые зависимости.
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Шаг 4: Запустите сервер разработки с авто-перезагрузкой.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+**Редактируйте файл напрямую в GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Перейдите к нужному файлу(ам).
+- Нажмите кнопку "Edit" (иконка карандаша) в верхнем правом углу.
+- Внесите изменения и закоммитьте.
 
-**Use GitHub Codespaces**
+**Используйте GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Перейдите на главную страницу репозитория.
+- Нажмите кнопку "Code" (зеленая кнопка) в верхнем правом углу.
+- Выберите вкладку "Codespaces".
+- Нажмите "New codespace" для запуска новой среды Codespace.
+- Редактируйте файлы непосредственно в Codespace и коммитьте и пушьте изменения.
 
-## What technologies are used for this project?
+## Какие технологии используются в этом проекте?
 
-This project is built with:
+Этот проект построен с использованием:
 
 - Vite
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
+- Supabase
 
-## How can I deploy this project?
+## Как развернуть этот проект?
 
-Simply open [Lovable](https://lovable.dev/projects/2dc28bfc-6b9d-4e64-bdc3-7dc9f3a94f3f) and click on Share -> Publish.
+Используйте любой хостинг, поддерживающий статические сайты или Node.js приложения, такой как Vercel, Netlify, или ваш собственный сервер.
 
-## Can I connect a custom domain to my Lovable project?
+## Можно ли подключить кастомный домен?
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Да, в зависимости от хостинга, вы можете подключить кастомный домен через настройки проекта.
